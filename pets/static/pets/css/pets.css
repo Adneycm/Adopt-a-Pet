@@ -1,0 +1,202 @@
+body {
+    background-image: linear-gradient(to right,white, #034484);
+}
+
+.appbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;  
+    align-content: flex-start;
+    background-color: #034484;
+    height: 70px;
+    width: 100%;
+    margin-top: 0px;
+    
+}
+
+.subtitle {
+    width: 100%;
+    position: relative;
+    bottom: 20px; 
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+
+.adotados {
+    width: 100%;
+    position: relative;
+    bottom: 20px; 
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /*Link já visitado*/
+  a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+
+.logo {
+    height: 90%;
+    width: 7%;
+    object-fit: contain;
+}
+
+.coleira {
+    height: 20%;
+    width: 15%;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.frase {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;  
+    align-content: center; 
+}
+
+.titleColeira {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;  
+    align-content: center; 
+}
+
+.card {
+    border-radius: 10%;
+    flex-direction: column;
+    box-shadow: 0 0 0.5em #4c4c4c;
+    padding: 7px;
+    margin: 6px 5px 12px 5px;
+    width: 330px;
+    height: 470px;
+    background-color: white;
+    background-image: url("https://media.istockphoto.com/photos/gray-doggy-tile-pattern-repeat-background-picture-id490747664?b=1&k=20&m=490747664&s=170667a&w=0&h=ca0K-dWeUfVBRk9nRwMmcsKXd-RStz_BbEXfJ-oTzdw=");
+
+}
+
+.card:hover {
+    /* width: 40%; */
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+  }
+  
+  /* .link img:hover{
+    transform: scale(1.05);
+    color: red; */
+
+
+.content {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.topCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    height: 70px;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.imgbellow1 {
+    max-width:250px;
+    width: auto;
+    height: auto;
+}
+
+.imgPet {
+    max-width:300px;
+    max-height:250px;
+    width: auto;
+    height: auto
+}
+
+.cardBellow {
+    border-radius: 10%;
+    flex-direction: column;
+    box-shadow: 0 0 0.5em #4c4c4c;
+    background-color: #034484;
+    color: white;
+    padding: 7px;
+    margin: 6px 5px 12px 5px;
+    width: 550px;
+    height: 500px;
+}
+
+.card-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;  
+    align-content: flex-end;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+ 
+.card-content {
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    height:75%;
+}
+
+hr {
+    border: 3px solid #034484;
+    background-color: #034484;
+}
+
+.adoptButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #034484;
+    height: 45px;
+    width: 300px;
+    border-radius: 17%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    color: white;
+    border-color: #4c4c4c;
+    border-width: 3px;
+}

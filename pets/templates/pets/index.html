@@ -1,0 +1,94 @@
+{% extends "pets/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="appbar">
+  <img src="{% static 'pets/img/pet.png' %}" class="logo"/>
+  <p class="subtitle">Adote um Pet e faça duas vidas melhores</p>
+  <p class="adotados"><a href="wantoAdopt">Pets adotados</a></p>
+  <!-- <p class="adotados">Pets adotados</p> -->
+</div>
+
+<div class="frase">Ache o seu novo melhor amigo!</div>
+
+<div class="card-container">
+{% for pet in pets %}
+
+<div class="card">
+    <li class="card-title" method="post">{{ pet.name }}</li>
+
+    {% if pet.photos %}
+        <img src="{{ pet.photos }}" class="imgPet"/>
+
+    {% else %}
+        <img src="{% static 'pets/img/adopt-no-image.png' %}" class="imgPet"/>
+
+    {% endif %}
+
+    <p class="content">Tipo: {{ pet.type }}</p>
+    <p class="content">Idade: {{ pet.age }}</p>
+    <p class="content">Gênero: {{ pet.gender }}</p>
+    <p class="content">Tamanho: {{ pet.size }}</p>
+    <p class="content">Descrição: {{ pet.description }}</p> 
+
+    <form method="post" action="adoptPage">
+      {% csrf_token %}
+      <input  type="hidden" name="id" value="{{pet.id}}"/>
+      <button class="adoptButton" type="submit">Quero adotar </button>
+    </form>   
+
+</div>
+
+{% endfor %}
+</div>
+
+<hr>
+
+<div class="frase">Histórias dos nossos Pets</div>
+
+<div class="card-container">
+
+  <div class="cardBellow">
+    <div class="topCard">
+      <img src="{% static 'pets/img/pet1bellow.jpg' %}" class="imgbellow1"/>
+      <li class="card-title" method="post">Ellen & Miles</li>
+    </div>
+      <p class="card-content">Então eu perdi meu cachorro para a velhice e jurei que nunca 
+        conseguiria outro porque foi muito doloroso perdê-lo. Um dia eu decidi que queria encontrar
+         um Dogue Alemão, então comecei minha busca, mas toda vez que encontrava um, ele desaparecia
+          antes que eu pudesse fazer minha inscrição. Hesitante porque ele não era um Dogue Alemão
+           completo, meu marido instantaneamente se uniu a ele e ele não se relaciona com a maioria
+            dos cães. Então adotamos Miles e devo dizer que toda a nossa família o ama. Ele é tão
+             amoroso e gentil com todos os recém-nascidos. Ele sabe quando estou com dor e se deita
+              em minhas pernas para me confortar. Meu marido estava tendo um ataque cardíaco
+               (não sabíamos), mas Miles sabia. Ele subiu no peito do meu marido e colocou todo
+               s os 90 quilos em cima dele, algo que ele nunca fez antes. Ele morre de medo de
+                tempestades, fogos de artifício, trovões e sopradores de folhas o deixam louco!
+                 Nós absolutamente amamos Miles!</p>  
+  </div>
+
+  <div class="cardBellow">
+    <div class="topCard">
+      <img src="{% static 'pets/img/pet2bellow.jpg' %}" class="imgbellow1"/>
+      <li class="card-title" method="post">Lael & Cassie</li>
+    </div>
+    <p class="card-content">Estávamos procurando um filhote para adotar há quase 4 meses.
+       Toda vez que encontrava um cachorrinho que eu gostava, ele era adotado. 
+       Um fim de semana eu estava procurando um cachorrinho 
+       (eu quase perdi a esperança de encontrar um certo), então eu vi Cassie. 
+       Marcamos um encontro, mas durante todo o caminho fiquei cheio de dúvidas, 
+       mas quando chegamos lá, fiquei muito feliz. Quando chegamos pela primeira vez, 
+       ela estava tão nervosa, mas se aqueceu e, no final, eu estava fazendo carinho em sua barriga.
+        O resgate disse que ela estava em uma casa com um cachorro idoso,
+         mas ela era muito cachorrinha, afinal ela tinha apenas 4 meses de idade.
+          Temos um labrador de 3 anos e eles se uniram imediatamente,
+           estamos muito felizes com ela e a amamos muito!</p>  
+  </div>
+
+</div>
+
+<!-- <div class="adoptButton">
+  <a href="adoptPage" class="a"><input type="button" value="Pets que você adotou" alt="Submit"/></a>
+</div> -->
+
+{% endblock %}

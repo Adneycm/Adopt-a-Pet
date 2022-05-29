@@ -1,0 +1,46 @@
+{% extends "pets/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="appbar">
+  <img src="{% static 'pets/img/pet.png' %}" class="logo"/>
+  <p class="subtitle">Adote um Pet e faça duas vidas melhores</p>
+  <p class="adotados"><a href='homePage'>Adotar mais Pets</a></p>
+</div>
+
+<div class="frase">Pets que você adotou!</div>
+
+
+<div class="card-container">
+  {% for pet in pets %}
+  
+  <div class="card">
+      <div class="titleColeira">
+      <li class="card-title" method="post">{{ pet.name }}</li>
+      <img src="{% static 'pets/img/coleira.png' %}" class="coleira"/>
+    </div>
+  
+      {% if pet.img %}
+          <p>here</p>
+          <img src="{{ pet.img }}" class="imgPet"/>
+  
+      {% else %}
+          <p>foi aq</p>
+          <img src="{% static 'pets/img/adopt-no-image.png' %}" class="imgPet"/>
+  
+      {% endif %}
+      
+      <p class="content">Tipo: {{ pet.type }}</p>
+      <p class="content">Idade: {{ pet.age }}</p>
+      <p class="content">Gênero: {{ pet.genre }}</p>
+      <p class="content">Tamanho: {{ pet.size }}</p>
+      <p class="content">Descrição: {{ pet.description }}</p> 
+  </div>
+  
+  {% endfor %}
+  </div>
+  
+
+
+
+{% endblock %}
