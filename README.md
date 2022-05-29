@@ -1,8 +1,7 @@
-# projeto-2-backend-adopt-a-pet-backend
-projeto-2-backend-adopt-a-pet-backend created by GitHub Classroom
+# Adopt a Pet
 
-Projeto feito apenas com Django.
-O objetivo do projeto foi criar um site para adoção de pets.
+
+Project made using django. The main purpose of the project was to create a website for adopting pets. For data extraction, a public and free API provided by the company Purina was used. ([link to API documentation](https://www.petfinder.com/developers/v2/docs/#introduction))
 
 ![alt text](pets/static/pets/img/imgReadme.png)
 
